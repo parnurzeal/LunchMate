@@ -28,10 +28,21 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/linker/styles/bootstrap.css">
+    <link rel="stylesheet" href="/linker/styles/custom.css">
     <!--STYLES END-->
   </head>
-
   <body>
+    
+    <!-- top navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"> LunchMate </a>
+        </div>
+      </div>
+    </div>
+
     <%- body %>
 
 
@@ -58,6 +69,7 @@
     -->
 
     <!--TEMPLATES-->
+    
     <!--TEMPLATES END-->
 
 
@@ -84,6 +96,11 @@
     -->
 
     <!--SCRIPTS-->
+    <script src="/linker/js/socket.io.js"></script>
+    <script src="/linker/js/sails.io.js"></script>
+    <script src="/linker/js/app.js"></script>
+    <script src="/linker/js/jquery.js"></script>
+    <script src="/linker/js/bootstrap.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

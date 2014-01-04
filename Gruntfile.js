@@ -57,7 +57,7 @@ module.exports = function (grunt) {
     'linker/js/app.js',
 
     // *->    put other dependencies here   <-*
-
+    'linker/js/jquery.js',
     // All of the rest of your app scripts imported here
     'linker/**/*.js'
   ];
@@ -194,6 +194,12 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           cwd: 'assets/linker/styles/',
+          src: ['*.less'],
+          dest: '.tmp/public/linker/styles/',
+          ext: '.css'
+        }, {
+          expand: true,
+          cwd: 'assets/linker/customstyles/',
           src: ['*.less'],
           dest: '.tmp/public/linker/styles/',
           ext: '.css'
