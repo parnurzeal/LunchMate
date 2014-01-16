@@ -28,8 +28,11 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/linker/styles/bootstrap-social.css">
+    <link rel="stylesheet" href="/linker/styles/bootstrap-theme.css">
     <link rel="stylesheet" href="/linker/styles/bootstrap.css">
     <link rel="stylesheet" href="/linker/styles/custom.css">
+    <link rel="stylesheet" href="/linker/styles/font-awesome.css">
     <!--STYLES END-->
   </head>
   <body>
@@ -56,12 +59,33 @@
             <h4 class="modal-title" id="signinLabel">Sign in to LunchMate</h4>
           </div>
           <div class="modal-body">
-            <div class="containter">
-              
+            <div class="row">
+              <div class="col-md-6">
+                <a class="btn btn-block btn-social btn-google-plus">
+                  <i class="fa fa-google-plus"></i> Sign in with Google+
+                </a>
+                <a class="btn btn-block btn-social btn-facebook">
+                  <i class="fa fa-facebook"></i> Sign in with Facebook
+                </a>
+                <a class="btn btn-block btn-social btn-twitter">
+                  <i class="fa fa-twitter"></i> Sign in with Twitter
+                </a>
+              </div>
+              <div class="col-md-6">
+                <form role="form">
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                  </div>
+                  <div class="form-group"> 
+                    <input type="email" class="form-control" id="password" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <a href="">Forgot your password?</a>
+                  </div>
+                  <button type="submit" class="btn btn-default">Sign In</button>
+                </form>
+              </div>
             </div>
-          </div>
-          <div class="modal-footer">
-
           </div>
         </div>
       </div>
@@ -125,7 +149,10 @@
     <script src="/linker/js/sails.io.js"></script>
     <script src="/linker/js/app.js"></script>
     <script src="/linker/js/jquery.js"></script>
+    <script src="/linker/js/additional-methods.js"></script>
+    <script src="/linker/js/additional-methods.min.js"></script>
     <script src="/linker/js/bootstrap.js"></script>
+    <script src="/linker/js/jquery.validate.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>
