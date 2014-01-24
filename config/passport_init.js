@@ -12,5 +12,5 @@ module.exports.express = {
       // ref: http://stackoverflow.com/questions/15350704/passport-js-failing-to-serialize-user
       // ref2: http://passportjs.org/guide/configure/
       //app.use(passport.session());
-  }
+	}
 };

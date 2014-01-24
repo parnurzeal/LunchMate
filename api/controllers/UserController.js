@@ -1,5 +1,5 @@
 /**
- * FacebookuserController
+ * UserController
  *
  * @module      :: Controller
  * @description	:: A set of functions called `actions`.
@@ -15,21 +15,28 @@
  * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
 
-var passport = require('passport');
-
 module.exports = {
+    
+  
+
+
   /**
    * Overrides for the settings in `config/controllers.js`
-   * (specific to FacebookuserController)
+   * (specific to UserController)
    */
   _config: {},
-  'login': function(req,res,next){
-  	console.log('login');
-  	passport.authenticate('facebook')(req,res,next);
+  
+  'new': function (req, res) {
+  	res.view();
   },
-  'login_callback': function(req,res,next){
-  	console.log('login_callback');
-  	passport.authenticate('facebook', {successRedirect: '/', failureRedirect: '/failure'})(req,res,next);
+  'create': function (req, res, next){
+  	// Create a User with the params sent from new page
+  	User.create( req.params.all(), function userCreated(err, user){
+  		
+  		if(err) return next(err);
+
+  		res.json(user);
+  	});
   }
 
   
