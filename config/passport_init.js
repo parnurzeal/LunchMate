@@ -11,6 +11,6 @@ module.exports.express = {
       // the problem is we need passport.serializeUser and passport.deserializeUser implemented as well.
       // ref: http://stackoverflow.com/questions/15350704/passport-js-failing-to-serialize-user
       // ref2: http://passportjs.org/guide/configure/
-      //app.use(passport.session());
+      app.use(passport.session());
 	}
 };

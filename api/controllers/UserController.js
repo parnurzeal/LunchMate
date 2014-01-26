@@ -17,17 +17,26 @@
 
 module.exports = {
     
-  
-
-
   /**
    * Overrides for the settings in `config/controllers.js`
    * (specific to UserController)
    */
   _config: {},
-  
+  // TODO: check req, res, next <-- are all needed? what is 'next' used for?
   'new': function (req, res) {
   	res.view();
+  },
+  'newsocial': function(req, res){
+    //console.log(req);
+    res.view();
+  },
+  // TODO: check user has data (email, name) otherwise let user fill his/her information first
+  // Ref: http://stackoverflow.com/questions/19268812/do-i-implement-serialize-and-deserialize-nodesjs-passport-redisstore
+  //      http://www.geektantra.com/2013/08/implement-passport-js-authentication-with-sails-js/
+  //      http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local
+  //      http://mherman.org/blog/2013/11/10/social-authentication-with-passport-dot-js/#.UuUokGSmq-U
+  'checkuser': function(req,res){
+    res.send('Check user data completed?')
   },
   'create': function (req, res, next){
   	// Create a User with the params sent from new page
@@ -39,5 +48,4 @@ module.exports = {
   	});
   }
 
-  
 };

@@ -29,7 +29,16 @@ module.exports = {
   },
   'login_callback': function(req,res,next){
   	console.log('login_callback');
-  	passport.authenticate('facebook', {successRedirect: '/', failureRedirect: '/failure'})(req,res,next);
+  	/*passport.authenticate('facebook',function(err, user, info){
+      if(err) {return next(err);}
+      if(!user) { return res.redirect('/facebook/failure')}
+      User.findOne({ facebook: user.username}, function(err, founduser){
+        if(err) return next(err);
+        if(!founduser) return res.redirect('/user/newsocial');
+        return res.json(founduser);
+      });
+    })(req,res,next);*/
+    passport.authenticate('facebook',{ successRedirect:'/user/checkuser'})(req,res,next);
   }
 
   

@@ -16,9 +16,12 @@ module.exports = {
   	/* e.g.
   	nickname: 'string'
   	*/
+    oauthID: {
+      type: 'string'
+    },
     name: {
-    	type: 'string',
-    	required: true
+    	type: 'string'
+    	//required: true
     },
     facebook: {
     	type: 'string'
@@ -26,7 +29,7 @@ module.exports = {
     email: {
     	type: 'string',
     	email: true,
-    	required: true,
+    	//required: true,
     	unique: true
     },
     encryptedPassword: {
